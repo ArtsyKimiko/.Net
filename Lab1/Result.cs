@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab1
 {
-    class Result
+    public class Result
     {
         public int TotalValue { get; }
         public int TotalWeight { get; }

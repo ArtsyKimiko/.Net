@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+[assembly: InternalsVisibleTo("Tests")]
 
 namespace Lab1
 {
-    class Problem
+    public class Problem
     {
         private int n;
-        private List<Item> items;
+        internal List<Item> items;
+        private List<int> selectedItems;
 
         public Problem(int n, int seed)
         {   
@@ -19,17 +22,29 @@ namespace Lab1
 
             for (int i = 0; i < n; i++)
             {
-                int value = random.Next(1, 11);
-                int weight = random.Next(1, 11);
+                int value = random.Next(1, n+1);
+                int weight = random.Next(1, n+1);
                 items.Add(new Item(i, value, weight));
             }
+        }
+        public List<int> getValues()
+        {
+            return items.ConvertAll(item => item.Value);
+        }
+        public List<int> getWeights()
+        {
+            return items.ConvertAll(item => item.Weight);
+        }
+        public List<Item> GetItems()
+        {
+            return items;
         }
 
         public Result Solve(int capacity)
         {
             items.Sort((a, b) => b.ValuePerWeight.CompareTo(a.ValuePerWeight));
 
-            List<int> selectedItems = new List<int>();
+            selectedItems = new List<int>();
             int totalValue = 0;
             int totalWeight = 0;
 
@@ -64,6 +79,5 @@ namespace Lab1
                 Console.WriteLine(item);
             }
         }
-
     }
 }
