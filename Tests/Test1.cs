@@ -1,4 +1,4 @@
-﻿using Lab1;
+﻿using KnapsackProblem;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Tests
@@ -34,19 +34,20 @@ namespace Tests
         [TestMethod]
         public void Solve_ShouldReturnCorrectResult_ForSpecificInstance()
         {
-            var problem = new Problem(10, 20);  // 3 przedmioty, z seedem 100
-            int capacity = 20;  // Zakładamy odpowiednią pojemność
+            var problem = new Problem(10, 20);
+            int capacity = 20;
 
             var result = problem.Solve(capacity);
 
-            int expectedValue = 29;  // Zależnie od generowanych danych, tutaj przykładowa wartość
-            int expectedWeight = 18;  // Zależnie od generowanych danych, przykładowa waga
-            List<int> expectedSelectedItems = new List<int> { 2, 9, 3, 7, 5, 8 };  // Przykładowe indeksy wybranych przedmiotów
+            int expectedValue = 29;
+            int expectedWeight = 18;
+            List<int> expectedSelectedItems = new List<int> { 2, 9, 3, 7, 5, 8 };
 
             Assert.AreEqual(expectedValue, result.TotalValue, "Total value is incorrect.");
             Assert.AreEqual(expectedWeight, result.TotalWeight, "Total weight is incorrect.");
             CollectionAssert.AreEqual(expectedSelectedItems, result.SelectedItems, "Selected items are incorrect.");
         }
+
         // Test: Sprawdzenie, czy program bierze pod uwagę wartość po przecinku przy sortowaniu przedmiotów
         [TestMethod]
         public void Solve_ShouldPickItemWithHigherValuePerWeightEvenIfDifferenceIsSmall()
@@ -62,7 +63,7 @@ namespace Tests
             Assert.AreEqual(0, result.SelectedItems[0], "Item with higher ValuePerWeight should be picked first.");
         }
 
-        // Test: Sprawdzenie, czy program poprawnie obsługuje duże liczby
+        // Test: Sprawdzenie, czy program szybko obsługuje duże liczby
         [TestMethod]
         public void Solve_ShouldWorkEfficientlyForLargeInputs()
         {

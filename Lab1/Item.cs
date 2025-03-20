@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 [assembly: InternalsVisibleTo("Tests")]
 
-namespace Lab1
+namespace KnapsackProblem
 {
     public class Item
     {

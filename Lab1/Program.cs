@@ -1,4 +1,4 @@
-﻿namespace Lab1
+﻿namespace KnapsackProblem
 {
     internal class Program
     {

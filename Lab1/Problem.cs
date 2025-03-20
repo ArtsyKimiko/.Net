@@ -4,9 +4,9 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-[assembly: InternalsVisibleTo("Tests")]
+[assembly: InternalsVisibleTo("Tests"), InternalsVisibleTo("WinFormsApp1")]
 
-namespace Lab1
+namespace KnapsackProblem
 {
     public class Problem
     {
@@ -24,7 +24,7 @@ namespace Lab1
             {
                 int value = random.Next(1, n+1);
                 int weight = random.Next(1, n+1);
-                items.Add(new Item(i, value, weight));
+                items.Add(new Item(i+1, value, weight));
             }
         }
         public List<int> getValues()
