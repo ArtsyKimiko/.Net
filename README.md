@@ -1,6 +1,4 @@
-To repozytorium zostało stworzone w ramach pracy laboratoryjnej.
-
-Poniżej znajduje się krótki opis zawartości poszczególnych katalogów.
+To repozytorium zostało stworzone w ramach pracy laboratoryjnej. Programy zostały napisane w języku C# przy użyciu platformy .NET 8. Poniżej znajduje się krótki opis zawartości poszczególnych katalogów.
 
 # Lab0 - FizzBuzz
 
