@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 [assembly: InternalsVisibleTo("Tests"), InternalsVisibleTo("WinFormsApp1")]
@@ -11,7 +12,7 @@ namespace KnapsackProblem
     public class Problem
     {
         private int n;
-        internal List<Item> items;
+        public List<Item> items;
         private List<int> selectedItems;
 
         public Problem(int n, int seed)

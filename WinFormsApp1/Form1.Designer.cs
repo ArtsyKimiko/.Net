@@ -107,6 +107,7 @@
             // 
             richTextBoxResult.Location = new Point(77, 362);
             richTextBoxResult.Name = "richTextBoxResult";
+            richTextBoxResult.ReadOnly = true;
             richTextBoxResult.Size = new Size(570, 145);
             richTextBoxResult.TabIndex = 8;
             richTextBoxResult.Text = "";
@@ -115,6 +116,7 @@
             // 
             richTextBoxItems.Location = new Point(304, 41);
             richTextBoxItems.Name = "richTextBoxItems";
+            richTextBoxItems.ReadOnly = true;
             richTextBoxItems.Size = new Size(343, 246);
             richTextBoxItems.TabIndex = 9;
             richTextBoxItems.Text = "";

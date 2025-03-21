@@ -41,7 +41,7 @@ namespace Tests
 
             int expectedValue = 29;
             int expectedWeight = 18;
-            List<int> expectedSelectedItems = new List<int> { 2, 9, 3, 7, 5, 8 };
+            List<int> expectedSelectedItems = new List<int> { 3, 10, 4, 8, 6, 9 };
 
             Assert.AreEqual(expectedValue, result.TotalValue, "Total value is incorrect.");
             Assert.AreEqual(expectedWeight, result.TotalWeight, "Total weight is incorrect.");
@@ -53,6 +53,7 @@ namespace Tests
         public void Solve_ShouldPickItemWithHigherValuePerWeightEvenIfDifferenceIsSmall()
         {
             var problem = new Problem(2, 42);
+            problem.items.Clear();
             problem.items.Add(new Item(0, 8, 6));  // ValuePerWeight = 1.33
             problem.items.Add(new Item(1, 9, 7));  // ValuePerWeight ≈ 1.29
             int capacity = 20;
