@@ -1,6 +1,6 @@
-To repozytorium powstało w wyniku pracy na labolatoriach.
+To repozytorium zostało stworzone w ramach pracy laboratoryjnej.
 
-Poniżej krótki spis tego co można znaleźć w poszczególnych katalogach.
+Poniżej znajduje się krótki opis zawartości poszczególnych katalogów.
 
 # Lab0 - FizzBuzz
 
